@@ -608,3 +608,26 @@ small {
   height: 12px;
   margin-right: 10px;
 }
+
+.error {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.error h1,
+.backHome {
+  position: relative;
+  top: 50px;
+}
+
+.error h1 {
+  top: 30px;
+  font-size: 2.3rem;
+}
+
+.backHome {
+  color: #fff;
+  background: #a14807;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
