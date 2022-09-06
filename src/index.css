@@ -412,6 +412,16 @@ a {
   border: 0.9px solid #c4c4c4;
   border-radius: 50px;
   color: #c4c4c4;
+  display: flex;
+  align-items: center;
+}
+
+.btnContents p {
+  color: #c4c4c4;
+}
+
+.btnContents img {
+  margin: 0px 5px;
 }
 
 .restaurantsContainer {
