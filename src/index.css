@@ -689,8 +689,13 @@ small {
     min-height: 100px;
   }
 
+  .blackBgContainer {
+    width: 0vw;
+    overflow: hidden;
+  }
+
   .closeMenu .blackBgContainer {
-    width: 0%;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -706,7 +711,6 @@ small {
     padding-left: 40px;
   }
 
-  .blackBgContainer,
   .searchContentContainer {
     width: 100vw;
   }
