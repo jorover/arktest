@@ -137,7 +137,6 @@ a {
 }
 
 .topBtnLink {
-  border: 1px solid #fff;
   margin: 40px auto 10px auto;
   width: 70%;
   position: relative;
@@ -167,6 +166,8 @@ a {
   width: 75%;
   margin: 0px auto 30px auto;
   padding: 10px;
+  height: 650px;
+  overflow-y: scroll;
 }
 
 .categoryContent li {
@@ -752,16 +753,8 @@ small {
   }
 }
 
-@media (max-width: 550px) {
-  .searchDisplayBtns,
-  .paymentMethod {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .searchDisplayBtns button {
-    margin-top: 10px;
-  }
-
+@media (max-width: 768px) {
+  .topBarLeftContent,
   .headerLogoImages,
   .rightIcon {
     display: none;
@@ -770,11 +763,23 @@ small {
   .topBarRightContent form {
     width: 100%;
     text-align: center;
+    margin: 22px 0px 0px 55px;
   }
 
   .topBarRightContent form input {
     width: 90%;
     margin: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .searchDisplayBtns,
+  .paymentMethod {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .searchDisplayBtns button {
+    margin-top: 10px;
   }
 
   .h-menu-logo {
@@ -794,10 +799,6 @@ small {
   .topBarRightContent form input {
     width: 100%;
     margin-left: 10px;
-  }
-
-  .blackBgContainer {
-    top: 190px;
   }
 
   .searchSection,
