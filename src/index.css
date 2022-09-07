@@ -19,7 +19,7 @@ a {
 }
 
 .topBarContainer {
-  width: 100%;
+  width: 100vw;
   background: #1d1b1b;
   color: #fff;
   min-height: 80px;
@@ -132,7 +132,8 @@ a {
   top: 80px;
   z-index: 1;
   overflow-y: scroll;
-  height: 750px;
+  height: 100vh;
+  transition: 0.3s;
 }
 
 .topBtnLink {
@@ -219,6 +220,8 @@ a {
 .homeContainer {
   display: flex;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .searchSection,
@@ -227,15 +230,15 @@ a {
   width: 100%;
   position: relative;
   top: 80px;
-  left: 25%;
-  height: fit-content;
+  left: 350px;
+  height: 100vh;
   background: #e5e5e5;
   padding-bottom: 20px;
 }
 
 .searchRequestBar {
   width: 50%;
-  margin-left: 13%;
+  margin-left: 12.5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -260,13 +263,13 @@ a {
 }
 
 .as {
-  margin-left: 13%;
+  margin-left: 12.5%;
   color: #a14807;
   padding-top: 20px;
 }
 
 .sortContent {
-  margin-left: 13%;
+  margin-left: 12.5%;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
@@ -286,8 +289,14 @@ a {
   border-radius: 5px;
 }
 
+.searchContentContainer {
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 100px;
+}
+
 .searchDisplayContent {
-  margin-left: 13%;
+  margin-left: 12.5%;
   width: 50%;
   background: #fff;
   padding: 15px;
@@ -630,4 +639,192 @@ small {
   background: #a14807;
   padding: 10px 20px;
   border-radius: 30px;
+}
+
+.close-logo {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+}
+
+.hamburger-icon {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+}
+
+.close-logo,
+.hamburger-icon {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .topBarRightContent {
+    width: 60%;
+  }
+
+  .searchRequestBar,
+  .as,
+  .sortContent,
+  .searchDisplayContent {
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 970px) {
+  .searchRequestBar,
+  .as,
+  .sortContent,
+  .searchDisplayContent {
+    width: 55%;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 885px) {
+  .topBarContainer {
+    min-height: 100px;
+  }
+
+  .closeMenu .blackBgContainer {
+    width: 0%;
+    overflow: hidden;
+  }
+
+  .circle-img-logo {
+    top: 52px;
+  }
+
+  .h-menu-logo {
+    left: 47px;
+  }
+
+  .takeOut::placeholder {
+    padding-left: 40px;
+  }
+
+  .blackBgContainer,
+  .searchContentContainer {
+    width: 100vw;
+  }
+
+  .topBtnLink {
+    width: 50%;
+    margin: 50px auto 30px auto;
+  }
+
+  .blackBgContainer,
+  .searchSection,
+  .mapSection,
+  .mapTwoSection {
+    top: 100px;
+    left: 0px;
+  }
+
+  .searchRequestBar,
+  .as,
+  .sortContent,
+  .searchDisplayContent {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .topBarLinkContent {
+    flex-direction: column;
+  }
+
+  .topBarLeftContent,
+  .topBarRightContent {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .searchContent {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .close-logo,
+  .hamburger-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .searchDisplayBtns,
+  .paymentMethod {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .searchDisplayBtns button {
+    margin-top: 10px;
+  }
+
+  .headerLogoImages,
+  .rightIcon {
+    display: none;
+  }
+
+  .topBarRightContent form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .topBarRightContent form input {
+    width: 90%;
+    margin: auto;
+  }
+
+  .h-menu-logo {
+    left: 35px;
+  }
+
+  .takeOut::placeholder {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .topBarLeftContent {
+    flex-direction: column;
+  }
+
+  .topBarRightContent form input {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .blackBgContainer {
+    top: 190px;
+  }
+
+  .searchSection,
+  .mapSection,
+  .mapTwoSection {
+    top: 200px;
+    left: 0px;
+  }
+  .searchDisplayBtns,
+  .paymentMethod {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .paymentMethod {
+    place-items: center;
+  }
+
+  .searchContent {
+    padding-bottom: 130px;
+  }
+
+  .h-menu-logo {
+    left: 30px;
+  }
+
+  .takeOut::placeholder {
+    padding-left: 40px;
+  }
 }

@@ -7,7 +7,8 @@ const Home = () => {
     <section className="homeContainer">
       <BlackBg
       blackBgContent="home"
-      data={[]} />
+      data={[]}
+      openMenu="homeMenu" />
       <Search />
     </section>
   )

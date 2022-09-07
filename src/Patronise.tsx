@@ -15,7 +15,8 @@ const Patronise = () => {
     <section className="homeContainer">
          <BlackBg 
          blackBgContent="patronise"
-         data={[]} />
+         data={[]}
+         openMenu="patroniseMenu" />
          <Map />
     </section>
   )

@@ -11,6 +11,8 @@ import CircleImage from './circ.png'
 import BoxesImage from './boxes.png'
 import ProfileImage from './user.png'
 import DropDown from './dropDown.png'
+import Hamburger from './hamburger.png'
+import { addRemoveMenu } from './openCloseMenu'
 
 const TopBar = () => {
   return (
@@ -63,6 +65,10 @@ const TopBar = () => {
 
             </article>
         </div>
+
+        <figure>
+            <img src={Hamburger} alt="hamburger-icon" className="hamburger-icon" onClick={addRemoveMenu} />
+        </figure>
     </section>
   )
 }

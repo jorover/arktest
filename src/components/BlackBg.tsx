@@ -10,13 +10,16 @@ import MoreOptions from './MoreOptions'
 import Options from './Options'
 import TakeOutSearchBar from './TakeOutSearchBar'
 import VendorIcons from './VendorIcons'
+import Close from '../close.png'
+import { addRemoveMenu } from '../openCloseMenu'
 
 interface blackBg {
     blackBgContent:string,
-    data:any
+    data:any,
+    openMenu:string
 }
 
-const BlackBg:React.FC<blackBg> = ( {blackBgContent, data}:blackBg ) => {
+const BlackBg:React.FC<blackBg> = ( {blackBgContent, data, openMenu}:blackBg ) => {
 
 
     const addActive = (e:React.FormEvent<EventTarget>) => {
@@ -35,7 +38,7 @@ const BlackBg:React.FC<blackBg> = ( {blackBgContent, data}:blackBg ) => {
     }
 
   return (
-    <section className="blackBgContainer">
+    <section className={`blackBgContainer ${openMenu}`}>
         <div className="topBtnLink">
             <Link to="/patronise">
                 <button className="btn btn-light topBarBtn" onClick={addActive}>
@@ -85,6 +88,9 @@ const BlackBg:React.FC<blackBg> = ( {blackBgContent, data}:blackBg ) => {
             </>
         }
     
+        <figure>
+            <img src={Close} alt="close-logo"  className="close-logo" onClick={addRemoveMenu}/>
+        </figure>
 
     </section>
   )

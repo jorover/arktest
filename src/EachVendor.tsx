@@ -28,7 +28,8 @@ const EachVendor = () => {
     <section className="homeContainer">
         <BlackBg
         blackBgContent="eachVendor"
-        data={newData} />
+        data={newData}
+        openMenu="eachVendorMenu" />
         <MapTwo />
     </section>
   )
